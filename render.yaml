@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: barclays-bank-india-demo
+    runtime: static
+    buildCommand: ""
+    staticPublishPath: .

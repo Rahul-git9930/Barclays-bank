@@ -20,6 +20,10 @@ The project uses plain HTML, CSS, and JavaScript, so it needs no build step or p
 
 If port 8000 is already in use, choose another port, such as `8001`, and visit that port instead. The Google Fonts stylesheet uses an internet connection; the page falls back to system sans-serif fonts if those fonts cannot load.
 
+### Deploying on Render
+
+`render.yaml` configures this as a static site with no build step and the repository root (`.`) as its publish directory. If the existing Render service was created with manual settings, set its **Publish Directory** to `.` in the Render dashboard (or create/sync it as a Blueprint from this repository) so Render stops looking for a generated `build` folder.
+
 ## Page layout
 
 ### Navigation sidebar
