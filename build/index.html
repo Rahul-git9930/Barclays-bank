@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en-IN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f7f4" />
+  <title>Barclays Bank — India banking demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#overview" aria-label="Barclays Bank home"><span class="brand-mark">B</span><span>Barclays Bank</span></a>
+      <div class="workspace-label">YOUR BANK</div>
+      <nav class="nav-list" aria-label="Main navigation">
+        <a class="nav-item active" href="#overview"><span class="nav-icon">◫</span>Overview</a>
+        <a class="nav-item" href="#transactions"><span class="nav-icon">↕</span>Transactions</a>
+        <a class="nav-item" href="#cards"><span class="nav-icon">▱</span>Cards</a>
+        <a class="nav-item" href="#payments"><span class="nav-icon">⇢</span>UPI & payments</a>
+        <a class="nav-item" href="#insights"><span class="nav-icon">⌁</span>Insights</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-card"><div class="help-icon">✳</div><strong>Need a hand?</strong><p>We're here for you, 24×7.</p><a href="mailto:support@barclays-demo.example">Visit help centre <span>↗</span></a></div>
+        <a class="nav-item" href="#settings"><span class="nav-icon">⚙</span>Settings</a>
+        <button class="profile"><span class="avatar">RW</span><span class="profile-name"><b>Rahul Waditake</b><small>Personal account</small></span><span class="dots">···</span></button>
+      </div>
+    </aside>
+
+    <main class="main-content" id="overview">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+        <div class="breadcrumb">Good morning, <strong>Rahul</strong> <span class="wave">✳</span></div>
+        <div class="top-actions"><span class="date-label" id="today"></span><button class="icon-button theme-toggle" id="themeToggle" aria-label="Switch to light mode" title="Switch to light mode">☼</button><button class="icon-button" id="notificationsButton" aria-label="Notifications">♧<i class="notification-dot"></i></button><button class="avatar top-avatar" id="profileButton" aria-label="Profile">RW</button></div>
+      </header>
+
+      <section class="welcome-row">
+        <div><div class="eyebrow"><span id="welcomeDate"></span></div><h1>Namaste, <span>Rahul.</span></h1><p class="subtitle">Your money at a glance. Secure banking, made simple.</p></div>
+        <button class="primary-button" id="openTransfer"><span>＋</span> Send money</button>
+      </section>
+
+      <section class="summary-grid" aria-label="Account summary">
+        <article class="balance-card">
+          <div class="card-top"><span class="card-label">TOTAL BALANCE · INR</span><button class="visibility-button" id="toggleBalance" aria-label="Hide balance">◉ <span>Hide</span></button></div>
+          <div class="balance-amount" id="balanceAmount">₹8,42,680<span>.50</span></div>
+          <div class="balance-change"><span class="change-pill">↗ 4.8%</span><span>vs. last month</span></div>
+          <div class="balance-chart" aria-label="Balance trending upward"><svg viewBox="0 0 600 100" preserveAspectRatio="none" role="img"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#a9d7b5" stop-opacity=".28"/><stop offset="1" stop-color="#a9d7b5" stop-opacity="0"/></linearGradient></defs><path d="M0 78 C25 74 31 55 57 65 S94 74 120 51 S157 62 181 47 S220 59 246 43 S282 52 309 34 S350 43 373 27 S413 43 437 22 S474 29 496 16 S546 25 565 10 S590 15 600 5 V100 H0 Z" fill="url(#fill)"/><path d="M0 78 C25 74 31 55 57 65 S94 74 120 51 S157 62 181 47 S220 59 246 43 S282 52 309 34 S350 43 373 27 S413 43 437 22 S474 29 496 16 S546 25 565 10 S590 15 600 5" fill="none" stroke="#a9d7b5" stroke-width="3" vector-effect="non-scaling-stroke"/></svg></div>
+          <div class="chart-labels"><span>JUN 01</span><span>JUN 08</span><span>JUN 15</span><span>JUN 22</span><span>JUN 30</span></div>
+        </article>
+        <article class="stat-card income-card"><div class="stat-head"><span class="stat-icon income-icon">↙</span><span class="card-label">INCOME THIS MONTH</span><button class="stat-more" aria-label="Income options">···</button></div><div class="stat-value">₹1,24,500<span>.00</span></div><div class="stat-foot"><span class="trend-up">↗ 12.5%</span><span>vs. last month</span></div><div class="mini-bars income-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+        <article class="stat-card expense-card"><div class="stat-head"><span class="stat-icon expense-icon">↗</span><span class="card-label">SPENT THIS MONTH</span><button class="stat-more" aria-label="Spending options">···</button></div><div class="stat-value">₹42,350<span>.80</span></div><div class="stat-foot"><span class="trend-down">↘ 3.2%</span><span>vs. last month</span></div><div class="mini-bars expense-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+      </section>
+
+      <section class="content-grid">
+        <article class="panel accounts-panel"><div class="section-heading"><div><h2>Your accounts</h2><p>Manage your money in one place</p></div><button class="text-link" id="allAccountsButton">All accounts <span>↗</span></button></div>
+          <button class="account-row" data-account="SBI savings account · account ending 4829"><span class="account-icon checking">◈</span><div class="account-copy"><b>Salary account</b><small>••••  4829 <span class="dot-sep">·</span> SBI · Savings</small></div><div class="account-balance">₹6,12,450<span>.50</span></div><span class="row-arrow">↗</span></button>
+          <button class="account-row" data-account="HDFC Bank savings account · account ending 1037"><span class="account-icon savings">⌂</span><div class="account-copy"><b>Smart savings</b><small>••••  1037 <span class="dot-sep">·</span> HDFC Bank</small></div><div class="account-balance">₹2,00,000<span>.00</span></div><span class="row-arrow">↗</span></button>
+          <button class="account-row" data-account="ICICI Bank savings account · account ending 7152"><span class="account-icon travel">✈</span><div class="account-copy"><b>Holiday fund</b><small>••••  7152 <span class="dot-sep">·</span> Goal: Kerala</small></div><div class="account-balance">₹30,230<span>.00</span></div><span class="row-arrow">↗</span></button>
+          <button class="add-account"><span>＋</span> Add an account</button>
+        </article>
+        <article class="panel spend-panel" id="insights"><div class="section-heading"><div><h2>Spending overview</h2><p>Where your money goes</p></div><select class="select-button" id="spendPeriod" aria-label="Spending period"><option>This month</option><option>Last month</option><option>This week</option></select></div><div class="spend-body"><div class="donut-wrap"><div class="donut"><div class="donut-center"><b id="spendTotal">₹42,350</b><small>Total spent</small></div></div></div><div class="legend"><div><i class="legend-dot housing-dot"></i><span>Home & bills</span><b>₹18,250</b></div><div><i class="legend-dot food-dot"></i><span>Food & dining</span><b>₹10,700</b></div><div><i class="legend-dot transport-dot"></i><span>Transport</span><b>₹7,100</b></div><div><i class="legend-dot other-dot"></i><span>Other</span><b>₹6,300</b></div></div></div><a class="spend-link" href="#insights">View spending insights <span>→</span></a></article>
+      </section>
+
+      <section class="panel transactions-panel" id="transactions"><div class="section-heading transaction-heading"><div><h2>Recent transactions</h2><p>Your latest account activity</p></div><div class="transaction-tools"><label class="search-box"><span>⌕</span><input id="transactionSearch" type="search" placeholder="Search transactions" aria-label="Search transactions"></label><button class="filter-button" id="filterButton">☷ <span>Filter</span></button><button class="text-link" id="seeAllTransactions">See all <span>↗</span></button></div></div><div class="table-wrap"><table><thead><tr><th>TRANSACTION</th><th>DATE</th><th>ACCOUNT</th><th>STATUS</th><th class="amount-col">AMOUNT</th></tr></thead><tbody id="transactionRows">
+          <tr data-search="bigbasket groceries food upi"><td><span class="merchant-icon wholefoods">w</span><span class="merchant-name"><b>BigBasket</b><small>Groceries · UPI</small></span></td><td>Today, 10:42 AM</td><td>Salary account</td><td><span class="status completed">Completed</span></td><td class="amount-col negative">−₹2,486.00</td></tr>
+          <tr data-search="nivara technologies salary income credit"><td><span class="merchant-icon acme">A</span><span class="merchant-name"><b>Nivara Technologies</b><small>Salary</small></span></td><td>Today, 9:15 AM</td><td>Salary account</td><td><span class="status completed">Completed</span></td><td class="amount-col positive">+₹92,000.00</td></tr>
+          <tr data-search="third wave coffee dining food upi"><td><span class="merchant-icon coffee">☕</span><span class="merchant-name"><b>Third Wave Coffee</b><small>Food & dining</small></span></td><td>Yesterday, 4:28 PM</td><td>Salary account</td><td><span class="status completed">Completed</span></td><td class="amount-col negative">−₹320.00</td></tr>
+          <tr data-search="ola cabs transport travel upi"><td><span class="merchant-icon uber">U</span><span class="merchant-name"><b>Ola Cabs</b><small>Transport</small></span></td><td>Yesterday, 1:06 PM</td><td>Salary account</td><td><span class="status completed">Completed</span></td><td class="amount-col negative">−₹245.00</td></tr>
+          <tr data-search="jiohotstar subscription entertainment pending"><td><span class="merchant-icon netflix">N</span><span class="merchant-name"><b>JioHotstar</b><small>Subscriptions</small></span></td><td>Nov 20, 2026</td><td>Salary account</td><td><span class="status pending">Pending</span></td><td class="amount-col negative">−₹149.00</td></tr>
+        </tbody></table><div class="empty-state" id="emptyState" hidden>No transactions match your search.</div></div></section>
+      <footer class="footer"><span>© 2026 Barclays Bank · Demo experience</span><span>INR <i>·</i> India</span><a href="#security" id="securityLink">Your money is protected <span>↗</span></a></footer>
+    </main>
+  </div>
+
+  <div class="modal-backdrop" id="transferModal" hidden><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="closeTransfer" aria-label="Close">×</button><span class="modal-icon">⇢</span><h2 id="modalTitle">Send money</h2><p>Pay by UPI or transfer to an Indian bank account.</p><form id="transferForm"><label>Recipient name<input name="recipient" placeholder="e.g. Priya Sharma" required /></label><label>UPI ID or account details<input name="destination" placeholder="name@upi or account number" required /></label><label>Payment method<select name="method"><option>UPI</option><option>IMPS</option><option>NEFT</option><option>RTGS</option></select></label><div class="form-row"><label>From account<select name="account"><option>Salary account</option><option>Smart savings</option><option>Holiday fund</option></select></label><label>Amount<input name="amount" type="number" min="1" step="1" placeholder="₹0" required /></label></div><label>Note <span class="optional">Optional</span><input name="note" placeholder="What's it for?" /></label><button class="primary-button submit-transfer" type="submit">Review payment <span>→</span></button></form><div class="form-success" id="formSuccess" hidden><span>✓</span><b>Payment details ready</b><p>Demo only: no payment has been sent. Connect a bank payment provider to enable real transfers.</p><button class="primary-button" id="doneTransfer">Done</button></div></section></div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -22,7 +22,7 @@ If port 8000 is already in use, choose another port, such as `8001`, and visit t
 
 ### Deploying on Render
 
-`render.yaml` configures this as a static site with no build step and the repository root (`.`) as its publish directory. If the existing Render service was created with manual settings, set its **Publish Directory** to `.` in the Render dashboard (or create/sync it as a Blueprint from this repository) so Render stops looking for a generated `build` folder.
+`render.yaml` configures this as a static site with no build step and the repository root (`.`) as its publish directory when Render creates or syncs a Blueprint from this repository. The existing Render service is configured to publish `build`, so this repository also includes a `build/` copy of the three static site files. That lets the existing service deploy without changing its dashboard settings. When updating the site files at the repository root, refresh the deploy copy with `mkdir -p build && cp index.html styles.css script.js build/` before committing. Alternatively, change the existing Render service's **Publish Directory** to `.` in its dashboard to publish the root files directly.
 
 ## Page layout
 
